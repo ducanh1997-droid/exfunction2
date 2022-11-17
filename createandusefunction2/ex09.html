@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 9</title>
+</head>
+<body onload="check(n,a)">
+
+</body>
+<script>
+    let n = [2,3,4,5,2,3,2];
+    let a= 2;
+    let count = 0;
+    function check(n,a){
+        let flag = false;
+        for(let i = 0;i<n.length;i++){
+            if(n[i] == a){
+                count ++;
+                flag = true;
+
+            }
+        }
+        if(!flag){
+            document.write("-1") ;
+        }
+        document.write(count);
+    }
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm tra đối xứng</title>
+</head>
+<body onload="show()">
+
+</body>
+<script>
+    function isPalindrome(s){
+
+        let arr = s.split("");
+         if(arr[0] == arr[arr.length-1]){
+             arr.shift();
+             arr.pop();
+
+             s = arr.join("");
+             if(arr.length<=1){
+                 return true;
+             }
+             return isPalindrome(s);
+         }
+
+
+    }
+    function show(){
+
+        if(isPalindrome("redder")){
+            document.write("là từ đối xứng")
+        }else{
+            document.write("là từ không đối xứng")
+        }
+    }
+</script>
+</html>
